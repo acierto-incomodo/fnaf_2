@@ -1,7 +1,7 @@
 [Setup]
 AppName=Five Nights at Freddy's 2 by StormGamesStudios
 AppVersion=1.0.3
-DefaultDirName={userappdata}\StormGamesStudios\NewGameDir\FNAF1
+DefaultDirName={userappdata}\StormGamesStudios\NewGameDir\FNAF2
 DefaultGroupName=StormGamesStudios
 OutputDir=C:\Users\mapsp\Documents\GitHub\fnaf_2\output
 OutputBaseFilename=FNAF1_Launcher_Installer
