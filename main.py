@@ -15,15 +15,13 @@ from PySide6 import QtCore, QtWidgets, QtGui
 LAUNCHER_VERSION = "1.0.0"
 
 # Windows build is split into two parts
-BUILD_URL_WIN_PART1 = "https://github.com/acierto-incomodo/fnaf_2/releases/latest/download/Part1.zip"
-BUILD_URL_WIN_PART2 = "https://github.com/acierto-incomodo/fnaf_2/releases/latest/download/Part2.zip"
-BUILD_URL_WIN_PART3 = "https://github.com/acierto-incomodo/fnaf_2/releases/latest/download/Part3.zip"
+BUILD_URL_WIN_PART1 = "https://github.com/acierto-incomodo/fnaf_2/releases/latest/download/Build.zip"
 BUILD_URL_LINUX = "https://github.com/acierto-incomodo/fnaf_2/releases/latest/download/Build.zip"
 VERSION_URL = "https://github.com/acierto-incomodo/fnaf_2/releases/latest/download/Version.txt"
 RELEASE_NOTES_URL = "https://github.com/acierto-incomodo/fnaf_2/releases/latest/download/ReleaseNotes.txt"
 
-EXE_NAME_WIN   = "Build/Hollow Knight Silksong.exe"
-EXE_NAME_LINUX = "Build/Hollow Knight Silksong.exe"
+EXE_NAME_WIN   = "Build/FiveNightsatFreddys2.exe"
+EXE_NAME_LINUX = "Build/FiveNightsatFreddys2.exe"
 
 DOWNLOAD_DIR = Path.cwd() / "downloads"
 GAME_DIR     = Path.cwd() / "game"
@@ -86,7 +84,7 @@ class LauncherWindow(QtWidgets.QWidget):
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Five Nights at Freddy's 1 - Launcher")
+        self.setWindowTitle("Five Nights at Freddy's 2 - Launcher")
         self.setMinimumSize(520, 420)
         self.setMaximumSize(520, 420)
         self.setWindowIcon(QtGui.QIcon.fromTheme("applications-games"))
@@ -100,7 +98,7 @@ class LauncherWindow(QtWidgets.QWidget):
     def setup_ui(self):
         layout = QtWidgets.QVBoxLayout(self)
 
-        title = QtWidgets.QLabel("Five Nights at Freddy's 1")
+        title = QtWidgets.QLabel("Five Nights at Freddy's 2")
         title.setAlignment(QtCore.Qt.AlignCenter)
         title.setStyleSheet("font-size:22px; font-weight:bold;")
         layout.addWidget(title)
@@ -283,9 +281,7 @@ class LauncherWindow(QtWidgets.QWidget):
         try:
             if sys.platform.startswith("win"):
                 downloads = [
-                    (BUILD_URL_WIN_PART1, "Part1.zip"),
-                    (BUILD_URL_WIN_PART2, "Part2.zip"),
-                    (BUILD_URL_WIN_PART3, "Part3.zip"),
+                    (BUILD_URL_WIN_PART1, "Build.zip"),
                 ]
             else:
                 downloads = [
